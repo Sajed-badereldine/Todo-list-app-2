@@ -1,0 +1,124 @@
+.page {
+  width: min(1160px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  align-items: center;
+  min-height: calc(100vh - 10rem);
+}
+
+.copy h1 {
+  margin: 0.4rem 0 1rem;
+  font-size: clamp(2.7rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  max-width: 12ch;
+}
+
+.copy p {
+  max-width: 56ch;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(201, 123, 38, 0.12);
+  color: var(--warm-accent-deep);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.8rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  border-radius: 16px;
+  padding: 0.95rem 1.15rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: white;
+}
+
+.secondaryButton {
+  border: 1px solid var(--border-strong);
+  color: var(--text-main);
+}
+
+.previewCard {
+  background: linear-gradient(180deg, var(--surface-elevated), var(--surface));
+  border: 1px solid var(--border-soft);
+  border-radius: 32px;
+  padding: 1.4rem;
+  box-shadow: var(--shadow-card);
+  transform: rotate(1.5deg);
+}
+
+.previewHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--text-muted);
+}
+
+.previewList {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.previewList article {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 22px;
+  background: var(--surface-elevated);
+}
+
+.previewList h3,
+.previewList p {
+  margin: 0;
+}
+
+.previewList p {
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.previewList span {
+  align-self: start;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  background: rgba(18, 127, 110, 0.12);
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .previewCard {
+    transform: none;
+  }
+}

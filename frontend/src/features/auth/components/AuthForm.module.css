@@ -1,0 +1,114 @@
+.wrapper {
+  width: min(100%, 30rem);
+}
+
+.card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  backdrop-filter: blur(18px);
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  margin: 0.35rem 0 0.6rem;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1;
+}
+
+.header p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(18, 127, 110, 0.12);
+  color: var(--accent-deep);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field span {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  background: var(--input-bg);
+  color: var(--text-main);
+  padding: 0.9rem 1rem;
+  font: inherit;
+  transition: border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(18, 127, 110, 0.12);
+  transform: translateY(-1px);
+}
+
+.field small {
+  color: var(--danger);
+}
+
+.submitButton {
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: white;
+  padding: 0.95rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.errorBanner,
+.successBanner {
+  border-radius: 16px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.errorBanner {
+  background: rgba(184, 73, 39, 0.1);
+  color: var(--danger);
+}
+
+.successBanner {
+  background: rgba(18, 127, 110, 0.1);
+  color: var(--accent-deep);
+}

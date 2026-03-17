@@ -1,0 +1,79 @@
+.card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: 22px;
+  padding: 1.15rem;
+  box-shadow: var(--shadow-card);
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.toggle {
+  border: none;
+  border-radius: 999px;
+  background: rgba(18, 127, 110, 0.14);
+  color: var(--accent-deep);
+  padding: 0.45rem 0.8rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.completed {
+  background: rgba(18, 127, 110, 0.2);
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.content h3 {
+  margin: 1rem 0 0.45rem;
+  font-size: 1.1rem;
+}
+
+.content p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.completedTitle {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.linkButton,
+.deleteButton {
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.linkButton {
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-main);
+}
+
+.deleteButton {
+  border: none;
+  background: rgba(184, 73, 39, 0.12);
+  color: var(--danger);
+}

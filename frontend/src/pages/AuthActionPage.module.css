@@ -1,0 +1,133 @@
+.wrapper {
+  width: min(100%, 34rem);
+}
+
+.card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  backdrop-filter: blur(18px);
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(18, 127, 110, 0.12);
+  color: var(--accent-deep);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0.7rem 0 0.75rem;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: 1;
+}
+
+.description {
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+}
+
+.message {
+  border-radius: 16px;
+  padding: 0.95rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.success {
+  background: rgba(18, 127, 110, 0.1);
+  color: var(--accent-deep);
+}
+
+.error {
+  background: rgba(184, 73, 39, 0.1);
+  color: var(--danger);
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field span {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  background: var(--input-bg);
+  color: var(--text-main);
+  padding: 0.9rem 1rem;
+  font: inherit;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(18, 127, 110, 0.12);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.button,
+.secondaryButton {
+  border-radius: 16px;
+  padding: 0.95rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.button {
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: white;
+  cursor: pointer;
+}
+
+.secondaryButton {
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-main);
+}
+
+.button:hover:not(:disabled),
+.secondaryButton:hover {
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.helperText {
+  margin-top: 1rem;
+  color: var(--text-muted);
+}
+
+.helperText a {
+  color: var(--accent-deep);
+  font-weight: 700;
+}
