@@ -6,6 +6,7 @@ import { typeOrmConfig } from './database/typeorm.config';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { TodosModule } from './todos/todos.module';
+import { HealthController } from './health/health.controller';
 
 @Module({
   imports: [
@@ -19,5 +20,6 @@ import { TodosModule } from './todos/todos.module';
     AuthModule,
     TodosModule,
   ],
+  controllers: [HealthController],
 })
 export class AppModule {}

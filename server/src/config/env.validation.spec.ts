@@ -12,10 +12,17 @@ describe('validateEnv', () => {
         DATABASE_NAME: 'todo_app',
         JWT_SECRET: 'secret',
         JWT_EXPIRES_IN: '1d',
+        MAIL_HOST: 'localhost',
+        MAIL_PORT: '1025',
+        MAIL_USER: 'user',
+        MAIL_PASS: 'pass',
+        MAIL_FROM: 'noreply@example.com',
+        CLIENT_URL: 'http://localhost:5173',
       }),
     ).toMatchObject({
       PORT: '3000',
       DATABASE_PORT: '5432',
+      MAIL_PORT: '1025',
     });
   });
 
