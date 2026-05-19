@@ -8,11 +8,7 @@ export const typeOrmConfig: TypeOrmModuleAsyncOptions = {
   inject: [ConfigService],
   useFactory: (configService: ConfigService) => ({
     type: 'postgres',
-    host: configService.getOrThrow<string>('DATABASE_HOST'),
-    port: Number(configService.getOrThrow<string>('DATABASE_PORT')),
-    username: configService.getOrThrow<string>('DATABASE_USERNAME'),
-    password: configService.getOrThrow<string>('DATABASE_PASSWORD'),
-    database: configService.getOrThrow<string>('DATABASE_NAME'),
+    url: configService.getOrThrow<string>('DATABASE_URL'),
     entities: [User, Todo],
     migrations: ['dist/database/migrations/*.js'],
     autoLoadEntities: false,
