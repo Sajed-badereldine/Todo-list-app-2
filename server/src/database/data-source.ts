@@ -1,10 +1,7 @@
 import 'dotenv/config';
 import { DataSource } from 'typeorm';
-import { validateEnv } from '../config/env.validation';
 import { User } from '../users/entities/user.entity';
 import { Todo } from '../todos/entities/todo.entity';
-
-validateEnv(process.env);
 
 export default new DataSource({
   type: 'postgres',
